@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map_stat_calc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.MapFragment" />
+    
+    <View android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_semi"/>
+    
+    <LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- * potential energy from solar
+    	* potential solar from wind
+    	* energy being used in total
+    	* energy being used from green sources
+    	* carbon emissions
+    	* amount of carbon emmissions that using the potential green energy would save -->
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+            <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                
+	            <ImageView android:id="@+id/stat_pot_solar_image"
+	                android:layout_width="150dp"
+	                android:layout_height="50dp"
+	                android:layout_gravity="left"
+	                android:scaleType="fitCenter"/>
+                
+	            <TextView android:id="@+id/stat_pot_solar"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:gravity="center"
+	                android:layout_gravity="center"
+	                android:textSize="16dp"
+                	android:textColor="@android:color/white"
+	                android:text="XYZ mW/h"/>
+            </LinearLayout>
+            
+            <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                
+	            <ImageView android:id="@+id/stat_pot_wind_image"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:layout_gravity="left"
+	                android:scaleType="fitCenter"/>
+	            
+	            <TextView android:id="@+id/stat_pot_wind"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:gravity="center"
+	                android:textSize="16dp"
+                	android:textColor="@android:color/white"
+	                android:text="XYZ mW/h"/>
+            </LinearLayout>
+            
+            <TextView android:id="@+id/stat_city_usage"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="16dp"
+                android:textColor="@android:color/white"
+                android:text="City's Energy Usage: "/>
+            
+            <TextView android:id="@+id/stat_carbon_poll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="16dp"
+                android:textColor="@android:color/white"
+                android:text="Carbon Emissions: "/>
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</FrameLayout>

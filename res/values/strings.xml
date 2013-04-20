@@ -4,5 +4,6 @@
     <string name="app_name">EnergyHunter</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
+    <color name="background_semi">#80000000</color>
 
 </resources>

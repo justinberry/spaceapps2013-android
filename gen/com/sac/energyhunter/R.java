@@ -128,23 +128,42 @@ containing a value of this type.
          */
         public static final int zOrderOnTop=0x7f01000d;
     }
+    public static final class color {
+        public static final int background_semi=0x7f060000;
+    }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
+        public static final int solar_l1=0x7f020001;
+        public static final int solar_l2=0x7f020002;
+        public static final int solar_l3=0x7f020003;
+        public static final int solar_l4=0x7f020004;
+        public static final int solar_l5=0x7f020005;
+        public static final int solar_l6=0x7f020006;
     }
     public static final class id {
         public static final int hybrid=0x7f040004;
         public static final int map=0x7f040005;
-        public static final int menu_settings=0x7f040006;
+        public static final int map_more_info_btn=0x7f040006;
+        public static final int map_stat_calc=0x7f040008;
+        public static final int menu_settings=0x7f04000e;
         public static final int none=0x7f040000;
         public static final int normal=0x7f040001;
         public static final int satellite=0x7f040002;
+        public static final int stat_carbon_poll=0x7f04000d;
+        public static final int stat_city_usage=0x7f04000c;
+        public static final int stat_pot_solar=0x7f040007;
+        public static final int stat_pot_solar_image=0x7f040009;
+        public static final int stat_pot_wind=0x7f04000b;
+        public static final int stat_pot_wind_image=0x7f04000a;
         public static final int terrain=0x7f040003;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
+        public static final int map_popup_layout=0x7f030001;
+        public static final int stats_calculator_layout=0x7f030002;
     }
     public static final class menu {
-        public static final int activity_main=0x7f070000;
+        public static final int activity_main=0x7f080000;
     }
     public static final class string {
         public static final int app_name=0x7f050011;
@@ -235,11 +254,11 @@ containing a value of this type.
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f070001;
     }
     public static final class styleable {
         /** Attributes that can be used with a MapAttrs.
