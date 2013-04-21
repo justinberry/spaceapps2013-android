@@ -41,12 +41,20 @@ public class MainActivity extends Activity implements OnMarkerClickListener{
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     
-    Downloader downloader = new Downloader();
-    downloader.download();
+
     
     map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map))
         .getMap();
-
+    
+    NodeData node = new NodeData();
+    node.latitude = 10;
+    node.longitude = 20;
+    node.uWindSpeed = 4;
+    node.uWindEnergy = 500;
+    node.uSolarEnergy = 1.5;
+    MapBuilder mapBuilder = new MapBuilder(map);
+    mapBuilder.addNode(node);
+    
     infoBtn = (Button)findViewById(R.id.map_more_info_btn);
     infoBtn.setOnClickListener(new OnClickListener() {
 		
@@ -56,7 +64,7 @@ public class MainActivity extends Activity implements OnMarkerClickListener{
 		}
 	});
     queryBackend();
-    zoomToCoords(MELBOURNE, "Melbourne");
+    //zoomToCoords(MELBOURNE, "Melbourne");
   }
   
   private void queryBackend(){
