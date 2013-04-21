@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map_stat_calc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.MapFragment" />
+    
+    <View android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_semi"/>
+    
+    <LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- * potential energy from solar
+    	* potential solar from wind
+    	* energy being used in total
+    	* energy being used from green sources
+    	* carbon emissions
+    	* amount of carbon emmissions that using the potential green energy would save -->
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+            
+            <FrameLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="1">
+                
+                <ImageView android:id="@+id/stat_pot_solar_image"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"/>
+                
+                <TextView android:id="@+id/stat_pot_solar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+	                android:textSize="16dp"
+	                android:textColor="@android:color/white"
+	                android:text="Solar Energy: "/>
+                    
+                
+            </FrameLayout>
+            
+             <TextView android:id="@+id/stat_city_usage"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@android:color/white"
+                android:text=""/>
+            
+            <TextView android:id="@+id/stat_carbon_poll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@android:color/white"
+                android:text=""/>
+            
+            <FrameLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="2">
+                
+	            <ImageView android:id="@+id/stat_pot_wind_image"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:layout_gravity="left"
+	                android:scaleType="fitCenter"/>
+	            
+	            <TextView android:id="@+id/stat_pot_wind"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:layout_gravity="center"
+	                android:gravity="center"
+	                android:textSize="16dp"
+                	android:textColor="@android:color/white"
+	                android:text="Wind Energy: "/>
+            </FrameLayout>
+            
+            <FrameLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="bottom">
+                
+                <ImageView android:id="@+id/stat_geo_image"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"/>
+                
+                <TextView android:id="@+id/stat_geo_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+	                android:textSize="16dp"
+	                android:textColor="@android:color/white"
+	                android:text="Geothermal Energy: "/>
+                    
+                
+            </FrameLayout>
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</FrameLayout>
