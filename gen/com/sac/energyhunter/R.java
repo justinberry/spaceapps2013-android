@@ -132,29 +132,45 @@ containing a value of this type.
         public static final int background_semi=0x7f060000;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int solar_l1=0x7f020001;
-        public static final int solar_l2=0x7f020002;
-        public static final int solar_l3=0x7f020003;
-        public static final int solar_l4=0x7f020004;
-        public static final int solar_l5=0x7f020005;
-        public static final int solar_l6=0x7f020006;
+        public static final int geo_l1=0x7f020000;
+        public static final int geo_l2=0x7f020001;
+        public static final int geo_l3=0x7f020002;
+        public static final int geo_l4=0x7f020003;
+        public static final int geo_l5=0x7f020004;
+        public static final int geo_l6=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
+        public static final int sol_l1=0x7f020007;
+        public static final int solar_l1=0x7f020008;
+        public static final int solar_l2=0x7f020009;
+        public static final int solar_l3=0x7f02000a;
+        public static final int solar_l4=0x7f02000b;
+        public static final int solar_l5=0x7f02000c;
+        public static final int solar_l6=0x7f02000d;
+        public static final int wind_l0=0x7f02000e;
+        public static final int wind_l1=0x7f02000f;
+        public static final int wind_l2=0x7f020010;
+        public static final int wind_l3=0x7f020011;
+        public static final int wind_l4=0x7f020012;
+        public static final int wind_l5=0x7f020013;
+        public static final int wind_l6=0x7f020014;
     }
     public static final class id {
         public static final int hybrid=0x7f040004;
         public static final int map=0x7f040005;
         public static final int map_more_info_btn=0x7f040006;
         public static final int map_stat_calc=0x7f040008;
-        public static final int menu_settings=0x7f04000e;
+        public static final int menu_settings=0x7f040010;
         public static final int none=0x7f040000;
         public static final int normal=0x7f040001;
         public static final int satellite=0x7f040002;
-        public static final int stat_carbon_poll=0x7f04000d;
-        public static final int stat_city_usage=0x7f04000c;
+        public static final int stat_carbon_poll=0x7f04000b;
+        public static final int stat_city_usage=0x7f04000a;
+        public static final int stat_geo_image=0x7f04000e;
+        public static final int stat_geo_txt=0x7f04000f;
         public static final int stat_pot_solar=0x7f040007;
         public static final int stat_pot_solar_image=0x7f040009;
-        public static final int stat_pot_wind=0x7f04000b;
-        public static final int stat_pot_wind_image=0x7f04000a;
+        public static final int stat_pot_wind=0x7f04000d;
+        public static final int stat_pot_wind_image=0x7f04000c;
         public static final int terrain=0x7f040003;
     }
     public static final class layout {

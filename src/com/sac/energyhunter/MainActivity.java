@@ -1,5 +1,9 @@
 package com.sac.energyhunter;
 
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.params.BasicHttpParams;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,10 +30,11 @@ public class MainActivity extends Activity implements OnMarkerClickListener{
   private Button infoBtn;
   
   private Marker curLocMark;
-  private int posSolarEnergy;
-  private int posWindEnergy;
-  private int posEUsage;
-  private int posCarbEmis;
+  int posSolarEnergy;
+  int posWindEnergy;
+  int posEUsage;
+  int posCarbEmis;
+  int posGeoEnergy;
   
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +57,9 @@ public class MainActivity extends Activity implements OnMarkerClickListener{
   private void queryBackend(){
 	  // code to get the information from the backend
 	  // just placeholders:
-	  posSolarEnergy = 8;
-	  posWindEnergy = 8;
+	  posSolarEnergy = 10;
+	  posWindEnergy = 12;
+	  posGeoEnergy = 18;
 	  posEUsage = 100;
 	  posCarbEmis = 6;
   }
@@ -84,10 +90,12 @@ public class MainActivity extends Activity implements OnMarkerClickListener{
    * - wind energy (mW/h (or kW/h, again, im clueless)) (int, "WindEnergy")
    * - total current city energy usage (kW/h or whatever unit) (int, "TotalEUsage")
    * - carbon emissions from city energy usage (tonnes) (int, "CarbonEmissions")
+   * - geothermal energy (kW/h) (int, "GeoEnergy")
    */
   public void goToStatCalculator(Bundle bundle){
 	  Intent statCalcIntent = new Intent(this, StatsCalculator.class);
 	  statCalcIntent.putExtras(bundle);
+	  System.out.println(bundle);
 	  startActivity(statCalcIntent);
   }
 
@@ -100,6 +108,8 @@ public class MainActivity extends Activity implements OnMarkerClickListener{
 		b.putInt("WindEnergy", posWindEnergy);
 		b.putInt("TotalEUsage", posEUsage);
 		b.putInt("CarbonEmissions", posCarbEmis);
+		b.putInt("GeoEnergy", posGeoEnergy);
+		System.out.println(b);
 		goToStatCalculator(b);
 		return false;
 	}
