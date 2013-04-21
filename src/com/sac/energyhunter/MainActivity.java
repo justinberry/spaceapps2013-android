@@ -21,6 +21,10 @@ public class MainActivity extends Activity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+    
+    Downloader downloader = new Downloader();
+    downloader.download();
+    
     map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map))
         .getMap();
     Marker hamburg = map.addMarker(new MarkerOptions().position(HAMBURG)
@@ -34,7 +38,7 @@ public class MainActivity extends Activity {
 
     // Move the camera instantly to hamburg with a zoom of 15.
     map.moveCamera(CameraUpdateFactory.newLatLngZoom(HAMBURG, 15));
-
+    
     // Zoom in, animating the camera.
     map.animateCamera(CameraUpdateFactory.zoomTo(10), 2000, null);
   }
